@@ -17,7 +17,7 @@ export async function createTicket(
       return { success: false, message: "All fields are required" };
     }
 
-    //Create ticket
+    //Create ticket in data base
 
     const ticket = await prisma.ticket.create({
       data: { subject, description, priority },
